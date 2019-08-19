@@ -45,7 +45,7 @@ The following is the comparison between ShuffleNetV2.Large and [SENet](https://a
 | Model                  | FLOPs | #Params   | Top-1     | Top-5 |
 | :--------------------- | :---: | :------:  | :---:     | :---: |
 | ShuffleNetV2.Large     | 12.7G | 140.7M    | **18.56** | 4.48  |
-| SEnet                  | 20.7G |    /      | 18.68     | 4.47  |
+| SENet                  | 20.7G |    /      | 18.68     | 4.47  |
 
 
 ### ShuffleNetV1
