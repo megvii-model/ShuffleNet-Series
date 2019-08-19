@@ -23,8 +23,10 @@ python train.py --eval --eval-resume YOUR_WEIGHT_PATH --model-size 300M --train-
 | Model                  | FLOPs | #Params   | Top-1 | Top-5 |
 | :--------------------- | :---: | :------:  | :---: | :---: |
 |DetNAS_small	| 300M	| 3.7M	 |  25.9 	|     8.3  |
-|DetNAS_medium	| 1.3G	| 10.4M	 |  22.8 	|     6.5  |
-|DetNAS_large	| 3.8G	| 29.5M	 |  21.5 	|     6.3  |
+|DetNAS_medium	| 1.3G	| 10.4M	 |  **22.8** 	|     6.5  |
+|DetNAS_large	| 3.8G	| 29.5M	 |  **21.5** 	|     6.3  |
+|ResNet50 | 3.8G	| \ |  24.7 	|     7.8  |
+|ResNet101 | 7.6G	| \ |  23.6 	|     7.1  |
 
 ## Citation
 If you use these models in your research, please cite:
