@@ -21,7 +21,12 @@ python train.py --eval --eval-resume YOUR_WEIGHT_PATH --train-dir YOUR_TRAINDATA
 
 | Model                  | FLOPs | #Params   | Top-1 | Top-5 |
 | :--------------------- | :---: | :------:  | :---: | :---: |
-|    OneShot |  328M |  3.4M |  25.4   |   8.0   |
+|    OneShot |  328M |  3.4M |  **25.4**   |   8.0   |
+|    NASNET-A|  564M |  5.3M |  26.0   |   8.4   |
+|    PNASNET|  588M |  5.1M |  25.8   |   8.1   |
+|    MnasNet|  317M |  4.2M |  26.0   |  8.2   |
+|    DARTS|  574M|  4.7M |  26.7   |   8.7  |
+|    FBNet-B|  295M|  4.5M |  25.9   |   /   |
     
 ## Citation
 If you use these models in your research, please cite:
