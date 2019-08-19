@@ -18,6 +18,7 @@ python train.py --eval --eval-resume YOUR_WEIGHT_PATH --train-dir YOUR_TRAINDATA
 
 ## Results
 
-| Model                  | FLOPs | #Params   | Top-1 | Top-5 |
-| :--------------------- | :---: | :------:  | :---: | :---: |
-| ShuffleNetV2.Large     | 12.7G | 140.7M    | 18.56 | 4.48  |
+| Model                  | FLOPs | #Params   | Top-1     | Top-5 |
+| :--------------------- | :---: | :------:  | :---:     | :---: |
+| ShuffleNetV2.Large     | 12.7G | 140.7M    | **18.56** | 4.48  |
+| SEnet                  | 20.7G |    /      | 18.68     | 4.47  |
