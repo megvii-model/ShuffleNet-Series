@@ -20,15 +20,11 @@ python train.py --eval --eval-resume YOUR_WEIGHT_PATH --model-size 1.5x --train-
 
 | Model                   | FLOPs | #Params  | Top-1        | Top-5     |
 | :--------------------- | :---: | :------: | :----------: | :------:  |
-
 |    ShuffleNetV2 2.0x    | 591M  |     7.4M |     **25.0** 	|     7.6   |
 | MobileNetV2 (1.4) | 585M | 6.9M | 25.3 | / |
-
 |    ShuffleNetV2 1.5x    | 299M  |     3.5M |     **27.4** 	|     9.4   | 
 | MobileNetV2 | 300M | 3.4M | 28.0 | / | 
-
 |    ShuffleNetV2 1.0x    | 146M  |     2.3M |     30.6 	|    11.1   |   
- 
 |    ShuffleNetV2 0.5x    |  41M  |     1.4M |     38.9 	|    17.4   |
 
 
