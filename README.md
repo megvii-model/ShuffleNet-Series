@@ -82,12 +82,13 @@ The following is the comparison between Single Path One-Shot NAS and other NAS c
 ### DetNAS
 The following is the performance of DetNAS on ImageNet, compared with ResNet. Details can be seen in [DetNAS](https://github.com/megvii-model/ShuffleNet-Series/tree/master/DetNAS).
 
-| Model                  | FLOPs | #Params   | Top-1 | Top-5 |
-| :--------------------- | :---: | :------:  | :---: | :---: |
-|DetNAS_small	| 300M	| 3.7M	 |  25.9 	|     8.3  |
-|DetNAS_medium	| 1.3G	| 10.4M	 |  **22.8** 	|     6.5  |
-|DetNAS_large	| 3.8G	| 29.5M	 |  **21.6** 	|     6.3  |
-|ResNet50 | 3.8G	| - |  23.9 	|     7.1  |
-|ResNet101 | 7.6G	| - |  22.6 	|     6.4  |
+| Model         | FLOPs | #Params | Top-1    | Top-5 |  mAP (COCO, FPN)* |
+| :------------ | :---: | :-----: | :---:    | :---: | :----------:     |
+|DetNAS_small	| 300M	| 3.7M	  |  25.9 	 |  8.3  | 36.4             |
+|DetNAS_medium	| 1.3G	| 10.4M	  | **22.8** |  6.5  | 40.0             |
+|DetNAS_large	| 3.8G	| 29.5M	  | **21.6** |  6.3  | **42.0**         |
+|ResNet50       | 3.8G	| -       |  23.9 	 |  7.1  | 37.3             |
+|ResNet101      | 7.6G	| -       |  22.6 	 |  6.4  | 40.0             |
 
+*COCO models are coming soon.
 
