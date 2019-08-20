@@ -72,7 +72,7 @@ The following is the comparison between Single Path One-Shot NAS and other NAS c
 
 | Model                  | FLOPs | #Params   | Top-1 | Top-5 |
 | :--------------------- | :---: | :------:  | :---: | :---: |
-|    OneShot |  328M |  3.4M |  **25.3**   |   8.0   |
+|    OneShot |  328M |  3.4M |  **25.1**   |   8.0   |
 |    NASNET-A|  564M |  5.3M |  26.0   |   8.4   |
 |    PNASNET|  588M |  5.1M |  25.8   |   8.1   |
 |    MnasNet|  317M |  4.2M |  26.0   |  8.2   |
