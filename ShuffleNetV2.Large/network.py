@@ -1,13 +1,5 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019-08-02 18:48 
-# @Author  : Yi Zou
-# @File    : network.py 
-# @Software: PyCharm
-
-
 import torch
 import torch.nn as nn
-from flops_counter import print_profile
 
 
 class Conv_BN_ReLU(nn.Module):
@@ -229,7 +221,6 @@ class ShuffleNetV2(nn.Module):
 
 def create_network():
     model = ShuffleNetV2()
-    print_profile(model)
     return model
 
 
