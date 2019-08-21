@@ -1,13 +1,5 @@
-# -*- coding: utf-8 -*-
-# # @Time    : 2019-08-06 18:53
-# # @Author  : Yi Zou
-# # @File    : network.py
-# # @Software: PyCharm
-
-
 import torch.nn as nn
 from blocks import ConvBNReLU, FC, ShuffleNetV2BlockSearched
-from flops_counter import print_profile
 
 
 class ShuffleNetV2DetNAS(nn.Module):
@@ -19,7 +11,7 @@ class ShuffleNetV2DetNAS(nn.Module):
             architecture = [0, 0, 3, 1, 2, 1, 0, 2, 0, 3, 1, 2, 3, 3, 2, 0, 2, 1, 1, 3,
                             2, 0, 2, 2, 2, 1, 3, 1, 0, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3]
             stage_repeats = [8, 8, 16, 8]
-            stage_out_channels = [-1, 72, 172, 432, 864, 1728, 1024]
+            stage_out_channels = [-1, 72, 172, 432, 864, 1728, 1728]
         elif model_size == '1.3G':
             architecture = [0, 0, 3, 1, 2, 1, 0, 2, 0, 3, 1, 2, 3, 3, 2, 0, 2, 1, 1, 3,
                             2, 0, 2, 2, 2, 1, 3, 1, 0, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3]
@@ -52,10 +44,10 @@ class ShuffleNetV2DetNAS(nn.Module):
 
         self.features = nn.Sequential(*self.features)
 
-        self.last_conv = ConvBNReLU(in_channel=in_channels, out_channel=1024, k_size=1, stride=1, padding=0)
+        self.last_conv = ConvBNReLU(in_channel=in_channels, out_channel=stage_out_channels[-1], k_size=1, stride=1, padding=0)
         self.drop_out = nn.Dropout2d(p=0.2)
         self.global_pool = nn.AvgPool2d(7)
-        self.fc = FC(in_channels=1024, out_channels=n_class)
+        self.fc = FC(in_channels=stage_out_channels[-1], out_channels=n_class)
         self._initialize_weights()
 
     def _initialize_weights(self):
@@ -97,7 +89,6 @@ class ShuffleNetV2DetNAS(nn.Module):
 def create_network():
     model = ShuffleNetV2DetNAS(model_size='1.3G')
     print(model)
-    print_profile(model)
     return model
 
 

@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019-08-05 13:01
-# @Author  : Yi Zou
-# @File    : blocks.py
-# @Software: PyCharm
-
-
 import torch
 import torch.nn as nn
 
