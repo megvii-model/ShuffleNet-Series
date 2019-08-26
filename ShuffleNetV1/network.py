@@ -11,16 +11,28 @@ class ShuffleNetV1(nn.Module):
 
         self.stage_repeats = [4, 8, 4]
         self.model_size = model_size
-        if model_size == '0.5x':
-            self.stage_out_channels = [-1, 12, 120, 240, 480]
-        elif model_size == '1.0x':
-            self.stage_out_channels = [-1, 24, 240, 480, 960]
-        elif model_size == '1.5x':
-            self.stage_out_channels = [-1, 24, 360, 720, 1440]
-        elif model_size == '2.0x':
-            self.stage_out_channels = [-1, 48, 480, 960, 1920]
-        else:
-            raise NotImplementedError
+        if group == 3:
+            if model_size == '0.5x':
+                self.stage_out_channels = [-1, 12, 120, 240, 480]
+            elif model_size == '1.0x':
+                self.stage_out_channels = [-1, 24, 240, 480, 960]
+            elif model_size == '1.5x':
+                self.stage_out_channels = [-1, 24, 360, 720, 1440]
+            elif model_size == '2.0x':
+                self.stage_out_channels = [-1, 48, 480, 960, 1920]
+            else:
+                raise NotImplementedError
+        elif group == 8:
+            if model_size == '0.5x':
+                self.stage_out_channels = [-1, 16, 192, 384, 768]
+            elif model_size == '1.0x':
+                self.stage_out_channels = [-1, 24, 384, 768, 1536]
+            elif model_size == '1.5x':
+                self.stage_out_channels = [-1, 24, 576, 1152, 2304]
+            elif model_size == '2.0x':
+                self.stage_out_channels = [-1, 48, 768, 1536, 3072]
+            else:
+                raise NotImplementedError
 
         # building first layer
         input_channel = self.stage_out_channels[1]
