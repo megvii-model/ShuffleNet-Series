@@ -77,14 +77,14 @@ class Shuffle_Xception(nn.Module):
             nn.BatchNorm2d(mid_channels),
             nn.ReLU(inplace=True),
             # dw
-            nn.Conv2d(mid_channels, mid_channels, 3, stride, 1, groups=mid_channels, bias=False),
+            nn.Conv2d(mid_channels, mid_channels, 3, 1, 1, groups=mid_channels, bias=False),
             nn.BatchNorm2d(mid_channels),
             # pw
             nn.Conv2d(mid_channels, mid_channels, 1, 1, 0, bias=False),
             nn.BatchNorm2d(mid_channels),
             nn.ReLU(inplace=True),
             # dw
-            nn.Conv2d(mid_channels, mid_channels, 3, stride, 1, groups=mid_channels, bias=False),
+            nn.Conv2d(mid_channels, mid_channels, 3, 1, 1, groups=mid_channels, bias=False),
             nn.BatchNorm2d(mid_channels),
             # pw
             nn.Conv2d(mid_channels, outputs, 1, 1, 0, bias=False),
