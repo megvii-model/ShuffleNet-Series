@@ -11,7 +11,8 @@ This repository contains the following ShuffleNet series models:
 -  DetNAS:     [DetNAS: Backbone Search for Object Detection](https://arxiv.org/abs/1903.10979)
 
 ## Trained Models
- OneDrive download: [Link](https://1drv.ms/f/s!AgaP37NGYuEXhRfQxHRseR7eSxXo)
+- OneDrive download: [Link](https://1drv.ms/f/s!AgaP37NGYuEXhRfQxHRseR7eSxXo)
+- BaiduYun download: [Link](https://pan.baidu.com/s/1EUQVoFPb74yZm0JWHKjFOw) (extract code: mc24)
 
 ## Details
 
