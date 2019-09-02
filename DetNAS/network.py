@@ -3,22 +3,34 @@ from blocks import ConvBNReLU, FC, ShuffleNetV2BlockSearched
 
 
 class ShuffleNetV2DetNAS(nn.Module):
-    def __init__(self, n_class=1000, model_size='300M'):
+    def __init__(self, n_class=1000, model_size='VOC_FPN_300M'):
         super(ShuffleNetV2DetNAS, self).__init__()
         print('Model size is {}.'.format(model_size))
 
-        if model_size == '3.8G':
+        if model_size == 'COCO_FPN_3.8G':
             architecture = [0, 0, 3, 1, 2, 1, 0, 2, 0, 3, 1, 2, 3, 3, 2, 0, 2, 1, 1, 3,
                             2, 0, 2, 2, 2, 1, 3, 1, 0, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3]
             stage_repeats = [8, 8, 16, 8]
             stage_out_channels = [-1, 72, 172, 432, 864, 1728, 1728]
-        elif model_size == '1.3G':
+        elif model_size == 'COCO_FPN_1.3G':
             architecture = [0, 0, 3, 1, 2, 1, 0, 2, 0, 3, 1, 2, 3, 3, 2, 0, 2, 1, 1, 3,
                             2, 0, 2, 2, 2, 1, 3, 1, 0, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3]
             stage_repeats = [8, 8, 16, 8]
             stage_out_channels = [-1, 48, 96, 240, 480, 960, 1024]
-        elif model_size == '300M':
+        elif model_size == 'COCO_FPN_300M':
+            architecture = [2, 1, 2, 0, 2, 1, 1, 2, 3, 3, 1, 3, 0, 0, 3, 1, 3, 1, 3, 2]
+            stage_repeats = [4, 4, 8, 4]
+            stage_out_channels = [-1, 16, 64, 160, 320, 640, 1024]
+        elif model_size == 'COCO_RetinaNet_300M':
+            architecture = [2, 3, 1, 1, 3, 2, 1, 3, 3, 1, 1, 1, 3, 3, 2, 0, 3, 3, 3, 3]
+            stage_repeats = [4, 4, 8, 4]
+            stage_out_channels = [-1, 16, 64, 160, 320, 640, 1024]
+        elif model_size == 'VOC_FPN_300M':
             architecture = [2, 1, 0, 3, 1, 3, 0, 3, 2, 0, 1, 1, 3, 3, 3, 3, 3, 3, 3, 1]
+            stage_repeats = [4, 4, 8, 4]
+            stage_out_channels = [-1, 16, 64, 160, 320, 640, 1024]
+        elif model_size == 'VOC_RetinaNet_300M':
+            architecture = [1, 3, 0, 0, 2, 3, 3, 3, 2, 3, 3, 3, 3, 2, 2, 0, 2, 3, 1, 1]
             stage_repeats = [4, 4, 8, 4]
             stage_out_channels = [-1, 16, 64, 160, 320, 640, 1024]
         else:
@@ -87,7 +99,7 @@ class ShuffleNetV2DetNAS(nn.Module):
 
 
 def create_network():
-    model = ShuffleNetV2DetNAS(model_size='1.3G')
+    model = ShuffleNetV2DetNAS(model_size='COCO_FPN_1.3G')
     print(model)
     return model
 

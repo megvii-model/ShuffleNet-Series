@@ -76,7 +76,14 @@ def get_args():
     parser.add_argument('--val-interval', type=int, default=10000, help='report frequency')
     parser.add_argument('--save-interval', type=int, default=10000, help='report frequency')
 
-    parser.add_argument('--model-size', type=str, default='300M', choices=['300M', '1.3G', '3.8G'], help='size of the model')
+    parser.add_argument('--model-size', type=str, default='VOC_FPN_300M',
+                        choices=['COCO_FPN_300M',
+                                 'COCO_FPN_1.3G',
+                                 'COCO_FPN_3.8G',
+                                 'COCO_RetinaNet_300M',
+                                 'VOC_FPN_300M',
+                                 'VOC_RetinaNet_300M'],
+                        help='size of the model')
 
     parser.add_argument('--train-dir', type=str, default='data/train', help='path to training dataset')
     parser.add_argument('--val-dir', type=str, default='data/val', help='path to validation dataset')
