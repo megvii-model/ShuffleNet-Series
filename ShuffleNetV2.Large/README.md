@@ -16,6 +16,12 @@ Eval:
 python train.py --eval --eval-resume YOUR_WEIGHT_PATH --train-dir YOUR_TRAINDATASET_PATH --val-dir YOUR_VALDATASET_PATH
 ```
 
+
+## Trained Models
+- OneDrive download: [Link](https://1drv.ms/f/s!AgaP37NGYuEXhRfQxHRseR7eSxXo)
+- BaiduYun download: [Link](https://pan.baidu.com/s/1EUQVoFPb74yZm0JWHKjFOw) (extract code: mc24)
+
+
 ## Results
 
 | Model                  | FLOPs | #Params   | Top-1     | Top-5 |

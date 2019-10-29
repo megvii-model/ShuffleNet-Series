@@ -18,6 +18,12 @@ Eval:
 python train.py --eval --eval-resume YOUR_WEIGHT_PATH --model-size Large --train-dir YOUR_TRAINDATASET_PATH --val-dir YOUR_VALDATASET_PATH
 ```
 
+
+## Trained Models
+- OneDrive download: [Link](https://1drv.ms/f/s!AgaP37NGYuEXhRfQxHRseR7eSxXo)
+- BaiduYun download: [Link](https://pan.baidu.com/s/1EUQVoFPb74yZm0JWHKjFOw) (extract code: mc24)
+
+
 ## Results
 
 The following is a comparison with MobileNetV3 in [Searching for MobileNetV3](https://arxiv.org/pdf/1905.02244).
