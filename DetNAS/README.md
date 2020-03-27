@@ -35,7 +35,7 @@ python train.py --eval --eval-resume YOUR_WEIGHT_PATH --model-size VOC_FPN_300M 
 |ResNet50 (COCO, FPN)    | 3.8G	|  -     |  23.9    |  7.1  |       37.3         |
 |ResNet101 (COCO, FPN)   | 7.6G	|  -     |  22.6    |  6.4  |       40.0         |
 
-*COCO models are coming soon.
+* More about DetNAS in [Link](https://github.com/megvii-model/DetNAS).
 
 ## Citation
 If you use these models in your research, please cite:
