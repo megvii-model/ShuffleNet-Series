@@ -41,9 +41,9 @@ python train.py --eval --eval-resume YOUR_WEIGHT_PATH --model-size VOC_FPN_300M 
 If you use these models in your research, please cite:
 
 
-    @article{chen2019detnas,
-        title={Detnas: Neural architecture search on object detection},
-        author={Chen, Yukang and Yang, Tong and Zhang, Xiangyu and Meng, Gaofeng and Pan, Chunhong and Sun, Jian},
-        journal={arXiv preprint arXiv:1903.10979},
-        year={2019}
+    @misc{chen2019detnas,
+        title={DetNAS: Backbone Search for Object Detection},
+        author={Yukang Chen, Tong Yang, Xiangyu Zhang, Gaofeng Meng, Xinyu Xiao, Jian Sun},
+        year={2019},
+        booktitle = {NeurIPS},
     }
